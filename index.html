@@ -226,7 +226,7 @@
             </div>
 
             <!-- Two Column Info (Side by side on mobile, stacked on desktop) -->
-            <div class="flex-grow flex flex-row md:flex-col gap-2 md:gap-4 min-h-[100px] md:min-h-0">
+            <div class="flex-grow flex flex-row md:flex-col gap-2 md:gap-4 min-h-[100px] md:min-h-0 overflow-hidden">
                 <!-- Inventory -->
                 <div class="w-1/2 md:w-full flex flex-col overflow-hidden border border-gray-900 p-2 rounded">
                     <h2 class="text-[10px] uppercase text-gray-500 mb-1 bg-black shrink-0">Inventory</h2>
@@ -236,7 +236,7 @@
                 </div>
 
                 <!-- Documentation System -->
-                <div class="w-1/2 md:w-full flex flex-col overflow-hidden border border-gray-900 p-2 rounded bg-gray-900/20">
+                <div class="w-1/2 md:w-full flex flex-col border border-gray-900 p-2 rounded bg-gray-900/20 min-h-0">
                     <!-- Tabs -->
                     <div class="flex gap-1 mb-1 border-b border-gray-800 shrink-0">
                         <button class="doc-tab active text-[9px] px-2 py-1 bg-gray-800 text-amber-500" data-tab="characters">CHARS</button>
@@ -244,18 +244,20 @@
                         <button class="doc-tab text-[9px] px-2 py-1 text-gray-600 hover:text-amber-500" data-tab="scenes">SCENES</button>
                         <button class="doc-tab text-[9px] px-2 py-1 text-gray-600 hover:text-amber-500" data-tab="notes">NOTES</button>
                     </div>
-                    <!-- Content Areas -->
-                    <div id="doc-characters" class="doc-content text-[10px] md:text-xs space-y-2 text-gray-400 font-normal overflow-y-auto">
-                        <div class="italic opacity-30">No characters documented yet.</div>
-                    </div>
-                    <div id="doc-evidence" class="doc-content hidden text-[10px] md:text-xs space-y-2 text-gray-400 font-normal overflow-y-auto">
-                        <div class="italic opacity-30">No evidence documented yet.</div>
-                    </div>
-                    <div id="doc-scenes" class="doc-content hidden text-[10px] md:text-xs space-y-2 text-gray-400 font-normal overflow-y-auto">
-                        <div class="italic opacity-30">No scenes documented yet.</div>
-                    </div>
-                    <div id="doc-notes" class="doc-content hidden text-[10px] md:text-xs space-y-2 text-gray-400 font-normal overflow-y-auto">
-                        <div class="italic opacity-30">No data recorded.</div>
+                    <!-- Content Areas - Scrollable Container -->
+                    <div class="flex-1 min-h-0 overflow-hidden">
+                        <div id="doc-characters" class="doc-content h-full text-[10px] md:text-xs space-y-2 text-gray-400 font-normal overflow-y-auto pr-1">
+                            <div class="italic opacity-30">No characters documented yet.</div>
+                        </div>
+                        <div id="doc-evidence" class="doc-content hidden h-full text-[10px] md:text-xs space-y-2 text-gray-400 font-normal overflow-y-auto pr-1">
+                            <div class="italic opacity-30">No evidence documented yet.</div>
+                        </div>
+                        <div id="doc-scenes" class="doc-content hidden h-full text-[10px] md:text-xs space-y-2 text-gray-400 font-normal overflow-y-auto pr-1">
+                            <div class="italic opacity-30">No scenes documented yet.</div>
+                        </div>
+                        <div id="doc-notes" class="doc-content hidden h-full text-[10px] md:text-xs space-y-2 text-gray-400 font-normal overflow-y-auto pr-1">
+                            <div class="italic opacity-30">No data recorded.</div>
+                        </div>
                     </div>
                 </div>
             </div>
