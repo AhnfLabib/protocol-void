@@ -1,0 +1,5 @@
+{
+  "name": "Protocol: Void",
+  "description": "A high-fidelity, text-based cyberpunk murder mystery game featuring a terminal interface, inventory management, and deductive reasoning puzzles.",
+  "requestFramePermissions": []
+}
